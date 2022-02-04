@@ -6,11 +6,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+
 public class MarkdownParseTest {
     @Test
     public void addition() {
         assertEquals(2, 1 + 1);
     }
+
     @Test
     public void testGetLinks() throws IOException {
         Path fileName = Path.of("test-file.md");
@@ -20,6 +22,7 @@ public class MarkdownParseTest {
         assertEquals("some-page.html", links.get(1));
 
     }
+
     @Test
     public void testGetLinks2() throws IOException {
         Path fileName = Path.of("ms.md");
@@ -30,6 +33,7 @@ public class MarkdownParseTest {
         assertEquals(links, expectedoutput);
 
     }
+
     @Test
     public void testGetLinks3() throws IOException {
         Path fileName = Path.of("cs1.md");
@@ -40,6 +44,7 @@ public class MarkdownParseTest {
         assertEquals(links, expectedoutput);
 
     }
+
     @Test
     public void testGetLinks4() throws IOException {
         Path fileName = Path.of("woohoo.md");
@@ -48,10 +53,5 @@ public class MarkdownParseTest {
         // Expected output
         ArrayList<String> expectedoutput = new ArrayList<>();
         assertEquals(links, expectedoutput);
-
     }
-
-
-
-
-
+}
